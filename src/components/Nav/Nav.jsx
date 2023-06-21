@@ -15,9 +15,9 @@ export default function Nav() {
                 <img src={Logo} className='logo'/>
                 <div className='nav-buttons'>
                 <Link to='/entertainment-web-app/'><img src={Home}/></Link>
-                <Link to='/movies'><img src={Movies}/></Link>
-                <Link to='/tvseries'><img src={TV}/></Link>
-                <Link to='/bookmarked'><img src={Bookmark}/></Link>
+                <Link to='/entertainment-web-app/movies'><img src={Movies}/></Link>
+                <Link to='/entertainment-web-app/tvseries'><img src={TV}/></Link>
+                <Link to='/entertainment-web-app/bookmarked'><img src={Bookmark}/></Link>
                 </div>
                 <div className='avatar'>
                 <img src={Avatar}/>    
