@@ -14,7 +14,7 @@ export default function Nav() {
             <nav className='side-nav'>
                 <img src={Logo} className='logo'/>
                 <div className='nav-buttons'>
-                <Link to='/'><img src={Home}/></Link>
+                <Link to='/entertainment-web-app'><img src={Home}/></Link>
                 <Link to='/movies'><img src={Movies}/></Link>
                 <Link to='/tvseries'><img src={TV}/></Link>
                 <Link to='/bookmarked'><img src={Bookmark}/></Link>
