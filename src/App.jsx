@@ -18,9 +18,9 @@ function App() {
     </Routes>
     </div>
     <Routes>
-      <Route path='/entertainment-web-app/movies' element={<Movie />} />
-      <Route path='/entertainment-web-app/tvseries' element={<TVSeries />} />
-      <Route path='/entertainment-web-app/bookmarked' element={<Bookmarked />} />
+      <Route path='/movies' element={<Movie />} />
+      <Route path='/tvseries' element={<TVSeries />} />
+      <Route path='/bookmarked' element={<Bookmarked />} />
     </Routes>
     </div>
     
