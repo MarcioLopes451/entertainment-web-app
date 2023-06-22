@@ -373,7 +373,7 @@ font-size: var(--font-size-headingXS);
   margin: 20px 0 0 20px;
  }
 .recommend {
-  max-width: 740px;
+  width: 100%;
 }
  .recommend-container {
   width: 100%;
@@ -395,15 +395,16 @@ font-size: var(--font-size-headingXS);
  }
  .movies {
   position: static;
-  margin: 2rem 2rem;
   width: 100%;
  }
  .movies-container {
   display: flex;
-  margin-left: 0.6rem;
+ justify-content: left;
+ margin: 0 3rem;
  }
- .movies h2 {
-  margin-top: 1rem;
+ .movies .search-bar, .movies h2 {
+  margin-top: 2rem;
+  margin-left: 2rem;
  }
 }
 
@@ -466,7 +467,15 @@ font-size: var(--font-size-headingXS);
   }
   .movies-container {
     display: flex;
+    margin: 0 0.5rem;
   }
+  .movies .search-bar, .movies h2 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+   }
+   .movies h2 {
+    font-size: 1.5rem;
+   }
   .movie-details p {
     font-size: 10px;
   }
