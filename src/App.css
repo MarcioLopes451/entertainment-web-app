@@ -377,7 +377,8 @@ font-size: var(--font-size-headingXS);
 }
  .recommend-container {
   width: 100%;
-  margin: 1rem 4.5rem;
+  display: flex;
+  justify-content: center;
  }
 
  .display-img {
@@ -394,10 +395,12 @@ font-size: var(--font-size-headingXS);
  }
  .movies {
   position: static;
-  margin: 1rem 0 0 3rem;
+  margin: 2rem 2rem;
+  width: 100%;
  }
  .movies-container {
-  margin-left: 2.3rem;
+  display: flex;
+  margin-left: 0.6rem;
  }
  .movies h2 {
   margin-top: 1rem;
@@ -462,7 +465,7 @@ font-size: var(--font-size-headingXS);
    margin-left: 1rem;
   }
   .movies-container {
-    margin-left: 0.8rem;
+    display: flex;
   }
   .movie-details p {
     font-size: 10px;
