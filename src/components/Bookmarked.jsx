@@ -1,7 +1,7 @@
 import React ,{useState}from 'react';
-import TV from '../../assets/icon-nav-tv-series.svg';
+import TV from '../../assets/icon-category-tv.svg';
 import data from '../../data.json';
-import Movies from '../../assets/icon-nav-movies.svg';
+import Movies from '../../assets/icon-category-movie.svg';
 import SearchBar from './SearchBar';
 import BookmarkedResultsList from '../Results/BookmarkedResultsList';
 import BookmarkFull from '../../assets/icon-bookmark-full.svg';
@@ -12,7 +12,7 @@ export default function Bookmarked() {
     const [results,setResults] = useState([])
   return (
     <div className='movies'>
-        <SearchBar placeholder='Search for Bookmarked Movies & Shows' setResults={setResults}/>
+        <SearchBar placeholder='Search for Bookmarks' setResults={setResults}/>
         {results && results.length > 0 ? <BookmarkedResultsList results={results}/> :
         <div>
             <h2>Bookmarked Movies</h2>

@@ -1,5 +1,5 @@
 import React ,{ useState }from 'react'
-import TV from '../../assets/icon-nav-tv-series.svg';
+import TV from '../../assets/icon-category-tv.svg';
 import data from '../../data.json';
 import SearchBar from './SearchBar';
 import TVSeriesResultsList from '../Results/TVSeriesResultsList';

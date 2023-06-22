@@ -78,19 +78,11 @@ form {
 
 /* trending */
 
-@keyframes scroll {
-   from {
-    left: 0;
-   }
-   to {
-    left: -100%;
-   }
-}
-
 .trending {
   margin-top: 34px;
   font-family: var(--font-family--primary);
-  width: 2510px;
+ width: 2510px;
+ overflow-x: scroll;
 }
 .trending p {
   font-size: var(--font-size-headingL);
@@ -100,6 +92,7 @@ form {
   margin-top: 1rem;
  display: flex;
  gap: 1.5rem;
+ overflow: hidden;
 }
 .content {
   position: relative;
@@ -355,7 +348,7 @@ font-size: var(--font-size-headingXS);
 
 /* tablet */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:820px) {
   
  .navbar {
   position: relative;
@@ -455,7 +448,7 @@ font-size: var(--font-size-headingXS);
     font-size: 10px;
   }
   .bookmark-icon {
-    left: 115px;
+    left: 100px;
     top: 10px;
   }
   .play-button {
@@ -464,6 +457,9 @@ font-size: var(--font-size-headingXS);
   }
   .movies {
    margin-left: 1rem;
+  }
+  .movies-container {
+    margin-left: 0.8rem;
   }
   .movie-details p {
     font-size: 10px;
