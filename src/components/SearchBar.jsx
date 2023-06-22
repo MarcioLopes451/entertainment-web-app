@@ -5,7 +5,7 @@ export default function SearchBar({placeholder = 'Search for movies or TV series
 const [input, setInput] = useState("");
 
 const fetchData = (value) => {
-    fetch('../../data.json').then((res) => res.json()).then((json) => {
+    fetch('/entertainment-web-app/data.json').then((res) => res.json()).then((json) => {
         const results = json.filter((user) => {
             return (
                 value &&
