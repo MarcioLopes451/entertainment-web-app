@@ -22,20 +22,16 @@ const fetchData = (value) => {
         setInput(value)
         fetchData(value)
     }
-      const onSubmit = (e) => {
-        e.preventdefault()
-      }
+      
         return (
                     <div className='search-bar'>
                         <img src={Search}/>
-                        <form onSubmit={onSubmit}>
                         <input 
                             type='text'
                             placeholder={placeholder}
                             value={input}
                             onChange={(e) => handleChange(e.target.value)}
                             />
-                        </form>
                     </div>
           )
     
