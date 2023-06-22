@@ -348,7 +348,7 @@ font-size: var(--font-size-headingXS);
 
 /* tablet */
 
-@media screen and (max-width:820px) {
+@media screen and (max-width:840px) {
   
  .navbar {
   position: relative;
@@ -377,7 +377,7 @@ font-size: var(--font-size-headingXS);
 }
  .recommend-container {
   width: 100%;
-  justify-content: center;
+  margin: 1rem 4.5rem;
  }
 
  .display-img {
@@ -395,6 +395,9 @@ font-size: var(--font-size-headingXS);
  .movies {
   position: static;
   margin: 1rem 0 0 3rem;
+ }
+ .movies-container {
+  margin-left: 2.3rem;
  }
  .movies h2 {
   margin-top: 1rem;
