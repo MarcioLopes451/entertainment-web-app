@@ -16,79 +16,65 @@ export default function Bookmarked() {
         {results && results.length > 0 ? <BookmarkedResultsList results={results}/> :
         <div>
             <h2>Bookmarked Movies</h2>
-    <div className='movies-container'>
-        {data.map((data,index) => (
-            <div key={index}>
-               {data.isBookmarked ? 
-               <div>
-                 {data.category === 'Movie' ? 
-                    <div className='movie-content'>
-                    <div className='movie-image'>
-                        <img src={data.thumbnail.regular.large} className='display-img'/>
-                        <div className='play-button'>
-                                    <div className='play-descripton'>
-                                        <img src={PlayButton} />
-                                        <p>Play</p>
-                                    </div>
-                                </div>
-                        <div className='bookmark-icon'>
-                                {data.isBookmarked ? <img src={BookmarkFull}/> : <img src={BookmarkEmpty}/>}
-                                </div>
-                        <div className='movie-details'>
-                            <p>{data.year}</p>
-                            <span>•</span>
-                            <p className='movie-icon'>{data.category === "Movie" ?
-                            <img src={Movies}/>: null 
-                            }{data.category}</p>
-                            <span>•</span>
-                            <p>{data.rating}</p>
-                        </div>
-                        <div className='movie-title'>
-                        <h4>{data.title}</h4>
-                    </div>
-                    </div>
-                </div> : null}
-               </div> : null}
-               </div>
-        ))}
-    </div>
-    <h2 className='book'>Bookmarked TV Series</h2>
-    <div className='movies-container'>
-        {data.map((data,index) => (
-            <div key={index}>
-                {data.isBookmarked ? 
-                <div>
-                    {data.category === 'TV Series' ? 
-                <div className='movie-content'>
-                <div className='movie-image'>
-                    <img src={data.thumbnail.regular.large} className='display-img'/>
-                    <div className='play-button'>
-                                    <div className='play-descripton'>
-                                        <img src={PlayButton} />
-                                        <p>Play</p>
-                                    </div>
-                                </div>
-                        <div className='bookmark-icon'>
-                                {data.isBookmarked ? <img src={BookmarkFull}/> : <img src={BookmarkEmpty}/>}
-                                </div>
-                    <div className='movie-details'>
-                        <p>{data.year}</p>
-                        <span>•</span>
-                        <p className='movie-icon'>{data.category === "TV Series" ?
-                        <img src={TV}/>: null 
-                        }{data.category}</p>
-                        <span>•</span>
-                        <p>{data.rating}</p>
-                    </div>
-                    <div className='movie-title'>
-                    <h4>{data.title}</h4>
+            <div className='container'>
+        {data.filter(data => data.isBookmarked === true).filter(data => data.category === 'Movie').map((data,id) => (
+          <div key={id} className='container-content'>
+            <div className='container-img'>
+              <img src={data.thumbnail.regular.large} className='display-img'/>
+              <div className='play-button'>
+                <div className='play-descripton'>
+                  <img src={PlayButton} />
+                  <p>Play</p>
                 </div>
-                </div>
-            </div> : null}
-                </div> : null}
+              </div>
+              <div className='bookmark-icon'>
+                {data.isBookmarked ? <img src={BookmarkFull}/> : <img src={BookmarkEmpty}/>}
+              </div>
+            </div>
+            <div className='recommend-info'>
+              <div className='recommend-info1'> 
+              <p>{data.year}</p>
+              <span>•</span>
+              <p className='recommending'>{data.category === "Movie" ?
+              <img src={Movies}/>: <img src={TV}/>} {data.category}</p>
+              <span>•</span>
+              <p>{data.rating}</p>
+              </div>
+              <p className='content-title'>{data.title}</p>
+              </div>
             </div>
         ))}
-    </div>
+      </div>
+    <h2 className='book'>Bookmarked TV Series</h2>
+    <div className='container'>
+        {data.filter(data => data.isBookmarked === true).filter(data => data.category === 'TV Series').map((data,id) => (
+          <div key={id} className='container-content'>
+            <div className='container-img'>
+              <img src={data.thumbnail.regular.large} className='display-img'/>
+              <div className='play-button'>
+                <div className='play-descripton'>
+                  <img src={PlayButton} />
+                  <p>Play</p>
+                </div>
+              </div>
+              <div className='bookmark-icon'>
+                {data.isBookmarked ? <img src={BookmarkFull}/> : <img src={BookmarkEmpty}/>}
+              </div>
+            </div>
+            <div className='recommend-info'>
+              <div className='recommend-info1'> 
+              <p>{data.year}</p>
+              <span>•</span>
+              <p className='recommending'>{data.category === "Movie" ?
+              <img src={Movies}/>: <img src={TV}/>} {data.category}</p>
+              <span>•</span>
+              <p>{data.rating}</p>
+              </div>
+              <p className='content-title'>{data.title}</p>
+              </div>
+            </div>
+        ))}
+      </div>
         </div>
         }
 </div>
