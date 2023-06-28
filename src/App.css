@@ -1,4 +1,5 @@
 /* navbar */
+
 .navbar {
   margin: 32px 32px 0 32px;
   position: absolute;
@@ -48,6 +49,7 @@
   position: absolute;
   left: 160px;
   top: 60px;
+
 }
 .home-container {
   display: block;
@@ -136,49 +138,96 @@ form {
 }
 
 /* recommend */ 
-.recommend {
-  margin-top: 40px;
+.container-heading {
   color: var(--White);
   font-family: var(--font-family--primary);
-}
-.recommend-p {
+  margin-top: 2rem;
   font-size: var(--font-size-headingL);
 }
-.recommend-container {
-  width: 100%;
-  max-width: 1240px;
-  margin-top: 1rem;
+.container {
+  max-width: 1500px;
+  margin-top: 30px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  gap: 2rem;
 }
-.recommend-content {
-  margin-top: 1rem;
- margin-right: 1rem;
-}
-.recommend-image {
+.container-img {
   position: relative;
 }
 
-.recommend-content{
+.display-img {
+  width: 280px;
+height: 174px;
+border-radius: 1rem;
+}
+
+.bookmark-icon {
+  position: absolute;
+  top: 20px;
+  left: 220px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
 }
-.recommend-content p,.recommend-content span {
-  opacity: 0.75;
+.bookmark-icon img {
+  width: 20px;
+}
+.play-button {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 174px;
+    background: rgb(0,0,0,0.6);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.25s;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.play-button:hover {
+  opacity: 1;
+}
+.play-descripton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(176, 176, 176, 0.6);
+  border-radius: 2rem;
+  width: 100px;
+  height: 50px;
+  padding-left: 5px;
+  color: var(--White);
+  font-family: var(--font-family--primary);
+}
+.play-descripton img {
+  height: 30px;
+  width: 30px;
 }
 .recommending {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
-.recommending img{
-  width: 12px;
-  height: 12px;
+.recommend-info1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--White);
+  font-family: var(--font-family--primary);
+  opacity: 0.7;
+  margin-top: 5px;
 }
-.recommend-title h4 {
-font-size: var(--font-size-headingXS);
+.content-title {
+  color: var(--White);
+  font-family: var(--font-family--primary);
+  font-weight:bolder;
 }
 
 /* movies/shows/bookmarked */

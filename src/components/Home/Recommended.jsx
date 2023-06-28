@@ -8,44 +8,38 @@ import PlayButton from '../../../assets/icon-play.svg';
 
 export default function Recommended() {
   return (
-    <div className='recommend'>
-        <p className='recommend-p'>Recommended for you</p>
-        <div className='recommend-container'>
-            {data.map((data,index) => (
-            <div key={index}>
-                {!data.isTrending ? 
-                <div className='recommend-content'>
-                    <div className='recommend-image'>
-                        <img src={data.thumbnail.regular.large} className='display-img'/>
-                        <div className='play-button'>
-                                    <div className='play-descripton'>
-                                        <img src={PlayButton} />
-                                        <p>Play</p>
-                                    </div>
-                                </div>
-                        <div className='bookmark-icon'>
-                                {data.isBookmarked ? <img src={BookmarkFull}/> : <img src={BookmarkEmpty}/>}
-                                </div>
-                        <div className='recommend-details'>
-                            <div className='recommend-content'>
-                                <p>{data.year}</p>
-                                <span>•</span>
-                                <p className='recommending'>{data.category === "Movie" ?
-                                <img src={Movies}/>: <img src={TV}/> 
-                                } {data.category}</p>
-                                <span>•</span>
-                                <p>{data.rating}</p>
-                            </div>
-                            <div className='recommend-title'>
-                                <h4>{data.title}</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div> : null}
+    <>
+    <h2 className='container-heading'>Recommended for you</h2>
+    <div className='container'>
+        {data.filter(data => data.isTrending === false).map((data,id) => (
+          <div key={id} className='container-content'>
+            <div className='container-img'>
+              <img src={data.thumbnail.regular.large} className='display-img'/>
+              <div className='play-button'>
+                <div className='play-descripton'>
+                  <img src={PlayButton} />
+                  <p>Play</p>
+                </div>
+              </div>
+              <div className='bookmark-icon'>
+                {data.isBookmarked ? <img src={BookmarkFull}/> : <img src={BookmarkEmpty}/>}
+              </div>
             </div>
-            ))}
-        </div>
-    </div>
+            <div className='recommend-info'>
+              <div className='recommend-info1'> 
+              <p>{data.year}</p>
+              <span>•</span>
+              <p className='recommending'>{data.category === "Movie" ?
+              <img src={Movies}/>: <img src={TV}/>} {data.category}</p>
+              <span>•</span>
+              <p>{data.rating}</p>
+              </div>
+              <p className='content-title'>{data.title}</p>
+              </div>
+            </div>
+        ))}
+      </div>
+      </>
   )
 }
 
