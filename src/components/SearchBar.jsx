@@ -11,7 +11,7 @@ const fetchData = (value) => {
                 value &&
                 user &&
                 user.title &&
-                user.title.toLowerCase().includes(value)
+                user.title.includes(value)
             )
         });
         setResults(results)
